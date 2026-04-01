@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amal EL ADDAOUI – Portfolio</title>
+  <title>Amal EL ADDAOU – Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
   <style>
-    /* 🎨 PALETTE CHIC & MODERNE — tons sophistiqués, professionnels */
     :root {
-      --deep-charcoal: #1A1C1E;       /* fond principal, profond */
-      --rich-ebony: #131517;           /* fond secondaire, plus dense */
-      --platinum: #E4E7EC;              /* texte clair, doux */
-      --cool-gray: #9AA4B2;             /* texte secondaire, discret */
-      --dusty-lavender: #8A7D91;        /* mauve-gris subtil, moderne */
-      --slate-blue: #546A7A;             /* bleu-gris sophistiqué */
-      --soft-black: #0C0D0E;             /* presque noir, pour contrastes */
-      --white-soft: #F2F5F9;              /* blanc cassé pour touches */
+      --deep-charcoal: #1A1C1E;
+      --rich-ebony: #131517;
+      --platinum: #E4E7EC;
+      --cool-gray: #9AA4B2;
+      --dusty-lavender: #8A7D91;
+      --slate-blue: #546A7A;
+      --soft-black: #0C0D0E;
+      --white-soft: #F2F5F9;
       --radius-sm: 6px;
       --radius-md: 12px;
       --transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -39,12 +38,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ——— ÉLÉMENTS GRAPHIQUES SUBTILS ——— */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background: 
+      background:
         radial-gradient(circle at 20% 30%, rgba(84, 106, 122, 0.08) 0%, transparent 30%),
         radial-gradient(circle at 80% 70%, rgba(138, 125, 145, 0.06) 0%, transparent 35%);
       pointer-events: none;
@@ -53,11 +51,8 @@
 
     .grid-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
+      inset: 0;
+      background-image:
         linear-gradient(rgba(138, 125, 145, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(138, 125, 145, 0.02) 1px, transparent 1px);
       background-size: 60px 60px;
@@ -65,7 +60,6 @@
       z-index: 0;
     }
 
-    /* ——— NAVBAR ÉPURÉE ——— */
     header {
       position: fixed;
       top: 0;
@@ -120,7 +114,6 @@
       border-bottom-color: var(--dusty-lavender);
     }
 
-    /* ——— HERO ——— */
     #accueil {
       min-height: 100vh;
       display: grid;
@@ -183,7 +176,7 @@
       font-size: 0.95rem;
       line-height: 1.8;
       color: var(--cool-gray);
-      max-width: 500px;
+      max-width: 560px;
       margin-bottom: 2.8rem;
     }
 
@@ -264,7 +257,6 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* ——— SECTIONS ——— */
     section {
       position: relative;
       z-index: 2;
@@ -302,8 +294,8 @@
       margin: 0 auto;
     }
 
-    /* ——— À PROPOS ——— */
-    #apropos {
+    #apropos,
+    #certifications {
       background: var(--rich-ebony);
     }
 
@@ -332,7 +324,6 @@
       bottom: 20px;
       right: 20px;
       background: var(--deep-charcoal);
-      backdrop-filter: blur(8px);
       color: var(--platinum);
       padding: 1.2rem 1.5rem;
       font-size: 0.75rem;
@@ -371,7 +362,6 @@
       width: 24px;
     }
 
-    /* ——— COMPÉTENCES CARTES MINIMALES ——— */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -423,6 +413,7 @@
       display: flex;
       gap: 2.5rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .lang-item {
@@ -441,7 +432,6 @@
       font-family: 'Space Grotesk', sans-serif;
     }
 
-    /* ——— TABLE FORMATION ——— */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -462,6 +452,7 @@
       padding: 1.2rem 1rem;
       color: var(--cool-gray);
       border-bottom: 1px solid rgba(138,125,145,0.1);
+      vertical-align: top;
     }
 
     td strong {
@@ -477,7 +468,6 @@
       font-size: 0.8rem;
     }
 
-    /* ——— PROJETS ——— */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -518,7 +508,8 @@
       font-weight: 300;
       color: rgba(138,125,145,0.2);
       position: absolute;
-      top: 1rem; right: 1.5rem;
+      top: 1rem;
+      right: 1.5rem;
     }
 
     h3 {
@@ -540,6 +531,7 @@
       flex-wrap: wrap;
       gap: 0.5rem;
       list-style: none;
+      margin-bottom: 1rem;
     }
 
     .project-stack li {
@@ -552,9 +544,15 @@
       font-family: 'Space Grotesk', sans-serif;
     }
 
-    /* ——— CERTIFICATIONS ——— */
-    #certifications {
-      background: var(--rich-ebony);
+    .project-link {
+      color: var(--dusty-lavender);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .project-link:hover {
+      color: var(--white-soft);
     }
 
     .cert-list {
@@ -576,11 +574,15 @@
       transition: var(--transition);
     }
 
-    .cert-list li:hover { border-color: rgba(138,125,145,0.5); }
+    .cert-list li:hover {
+      border-color: rgba(138,125,145,0.5);
+    }
 
-    .cert-icon { font-size: 1.4rem; filter: grayscale(30%); }
+    .cert-icon {
+      font-size: 1.4rem;
+      filter: grayscale(30%);
+    }
 
-    /* ——— CONTACT ——— */
     .socials-grid {
       display: flex;
       flex-wrap: wrap;
@@ -600,7 +602,7 @@
       color: var(--platinum);
       font-weight: 400;
       transition: var(--transition);
-      min-width: 200px;
+      min-width: 220px;
     }
 
     .social-link:hover {
@@ -609,9 +611,11 @@
       color: var(--white-soft);
     }
 
-    .social-icon { font-size: 1.1rem; color: var(--dusty-lavender); }
+    .social-icon {
+      font-size: 1.1rem;
+      color: var(--dusty-lavender);
+    }
 
-    /* ——— FOOTER ——— */
     footer {
       background: var(--soft-black);
       border-top: 1px solid rgba(138,125,145,0.1);
@@ -622,6 +626,8 @@
       font-size: 0.85rem;
       position: relative;
       z-index: 2;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .footer-brand {
@@ -629,7 +635,6 @@
       color: var(--platinum);
     }
 
-    /* ——— ANIMATION ——— */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -645,149 +650,296 @@
   </style>
 </head>
 <body>
-<div class="grid-overlay"></div>
+  <div class="grid-overlay"></div>
 
-<header>
-  <nav>
-    <a class="nav-logo" href="#accueil">A.E.</a>
-    <ul class="nav-links">
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#formation">Formation</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <a class="nav-logo" href="#accueil">A.E.</a>
+      <ul class="nav-links">
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#certifications">Certificats</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <!-- HERO -->
-  <section id="accueil">
-    <div class="hero-text">
-      <p class="hero-eyebrow">Stage PFA • juin 2026</p>
-      <h1>
-        Amal<br>
-        <span class="name-accent">EL ADDAOU</span>
-      </h1>
-      <p class="hero-title">Génie Logiciel & Systèmes Distribués</p>
-      <p class="hero-desc">
-        Étudiante-ingénieure à l'ENSET Mohammedia, je conçois des solutions logicielles robustes 
-        et explore l'architecture des systèmes distribués.
-      </p>
-      <div class="hero-ctas">
-        <a class="btn-primary" href="#projets">Projets</a>
-        <a class="btn-outline" href="#contact">Contact</a>
+  <main>
+    <section id="accueil">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Stage d’initiation • juillet–août</p>
+        <h1>
+          Amal<br>
+          <span class="name-accent">EL ADDAOU</span>
+        </h1>
+        <p class="hero-title">Étudiante ingénieure en Génie Logiciel & Systèmes Distribués</p>
+        <p class="hero-desc">
+          Étudiante en 1re année du cycle d’ingénierie à l’ENSET Mohammedia, avec des compétences en programmation orientée objet, algorithmique, structures de données, bases de données relationnelles, systèmes Linux et développement web.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#projets">Voir mes projets</a>
+          <a class="btn-outline" href="#contact">Me contacter</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-photo-wrap">
-      <div class="photo-frame">
-        <img class="profile-photo" src="amal.jpg" alt="Amal EL ADDAOUI">
+
+      <div class="hero-photo-wrap">
+        <div class="photo-frame">
+          <img class="profile-photo" src="amal.jpg" alt="Photo de Amal EL ADDAOU">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- À PROPOS -->
-  <section id="apropos">
-    <p class="section-label">01 — Profil</p>
-    <h2>À <em>propos</em></h2>
-    <div class="apropos-grid">
-      <div class="apropos-photo-wrap">
-        <img class="apropos-photo" src="amal.jpg" alt="Amal">
-        <div class="apropos-badge">ENSET Mohammedia<br>Cycle ingénieur<br>2025–2028</div>
+    <section id="apropos">
+      <p class="section-label">01 — Profil</p>
+      <h2>À <em>propos</em></h2>
+      <div class="apropos-grid">
+        <div class="apropos-photo-wrap">
+          <img class="apropos-photo" src="amal.jpg" alt="Amal EL ADDAOU">
+          <div class="apropos-badge">ENSET Mohammedia<br>Cycle ingénieur<br>2025–2028</div>
+        </div>
+        <div class="apropos-text">
+          <p>
+            Je poursuis actuellement un cycle d’ingénierie en Génie Logiciel et Systèmes Informatiques Distribués à l’ENSET Mohammedia, après l’obtention d’un DEUG en Informatique Appliquée à la Faculté des Sciences Semlalia de Marrakech.
+          </p>
+          <p>
+            Je m’intéresse particulièrement au développement logiciel, au cloud computing, aux architectures distribuées et à la conception d’applications web et intelligentes.
+          </p>
+          <ul class="contact-list">
+            <li><span class="icon">✉️</span> amaleladdaou07@gmail.com</li>
+            <li><span class="icon">📱</span> +212 6 22 86 46 75</li>
+            <li><span class="icon">📍</span> Mohammedia, Maroc</li>
+            <li><span class="icon">🚗</span> Mobilité : tout le Maroc</li>
+          </ul>
+        </div>
       </div>
-      <div class="apropos-text">
-        <p>Future ingénieure en Génie du Logiciel et Systèmes Distribués, je prépare un cycle d'ingénieur à l'ENSET Mohammedia (2025–2028) après un DEUG en Informatique à la Faculté des Sciences Semlalia (Marrakech) et un bac scientifique.</p>
-        <p>Passionnée par le développement full-stack, les bases de données et l'architecture logicielle.</p>
-        <ul class="contact-list">
-          <li><span class="icon">✉️</span> amaleladdaou07@gmail.com</li>
-          <li><span class="icon">📱</span> 0622864675</li>
-          <li><span class="icon">📍</span> Mohammadia, Maroc</li>
-        </ul>
+    </section>
+
+    <hr class="divider">
+
+    <section id="competences">
+      <p class="section-label">02 — Compétences</p>
+      <h2>Compétences <em>techniques</em></h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 class="skill-card-title">Langages</h3>
+          <ul class="skill-tags">
+            <li>Java</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Concepts</h3>
+          <ul class="skill-tags">
+            <li>POO</li>
+            <li>Algorithmique</li>
+            <li>Structures de données</li>
+            <li>UML</li>
+            <li>Architecture client-serveur</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Développement Web</h3>
+          <ul class="skill-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>Tailwind</li>
+            <li>React</li>
+            <li>Express.js</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Frameworks & Architectures</h3>
+          <ul class="skill-tags">
+            <li>Spring Boot (notions)</li>
+            <li>Microservices (notions)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Bases de données</h3>
+          <ul class="skill-tags">
+            <li>MySQL</li>
+            <li>SQL</li>
+            <li>Modélisation relationnelle</li>
+            <li>Requêtes SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Systèmes & Outils</h3>
+          <ul class="skill-tags">
+            <li>Linux</li>
+            <li>Shell</li>
+            <li>TCP/IP (notions)</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>IntelliJ IDEA</li>
+            <li>Postman</li>
+            <li>Docker (notions)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card-title">Cloud</h3>
+          <ul class="skill-tags">
+            <li>AWS EC2</li>
+            <li>AWS S3</li>
+            <li>AWS RDS</li>
+            <li>AWS IAM</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <hr class="divider">
+      <div class="lang-list">
+        <div class="lang-item">
+          <span class="lang-name">Anglais</span>
+          <span class="lang-level">avancé</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Français</span>
+          <span class="lang-level">avancé</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Arabe</span>
+          <span class="lang-level">langue maternelle</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- COMPÉTENCES -->
-  <section id="competences">
-    <p class="section-label">02 — Expertise</p>
-    <h2>Compétences <em>& langues</em></h2>
-    <div class="skills-grid">
-      <div class="skill-card"><h3 class="skill-card-title">Langages</h3><ul class="skill-tags"><li>C</li><li>C++</li><li>Python</li><li>JavaScript</li><li>PHP</li><li>SQL</li></ul></div>
-      <div class="skill-card"><h3 class="skill-card-title">Web</h3><ul class="skill-tags"><li>HTML5/CSS3</li><li>Bootstrap</li><li>Laravel</li><li>React.js</li><li>Node.js</li></ul></div>
-      <div class="skill-card"><h3 class="skill-card-title">Bases de données</h3><ul class="skill-tags"><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Merise/UML</li></ul></div>
-      <div class="skill-card"><h3 class="skill-card-title">Outils & OS</h3><ul class="skill-tags"><li>Linux/Ubuntu</li><li>Git/GitHub</li><li>Windows</li><li>MS Office</li></ul></div>
-    </div>
-    <div class="lang-list">
-      <div class="lang-item"><span class="lang-name">Arabe</span><span class="lang-level">maternel</span></div>
-      <div class="lang-item"><span class="lang-name">Français</span><span class="lang-level">très bien</span></div>
-      <div class="lang-item"><span class="lang-name">Anglais</span><span class="lang-level">avancé</span></div>
-    </div>
-  </section>
+    <hr class="divider">
 
-  <hr class="divider">
+    <section id="formation">
+      <p class="section-label">03 — Formation</p>
+      <h2>Parcours <em>académique</em></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Période</th>
+            <th>Formation</th>
+            <th>Établissement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><em>2025–2028</em></td>
+            <td>
+              <strong>Cycle d’ingénierie</strong>
+              Génie Logiciel et Systèmes Informatiques Distribués
+            </td>
+            <td>ENSET Mohammedia</td>
+          </tr>
+          <tr>
+            <td><em>2023–2025</em></td>
+            <td>
+              <strong>DEUG en Informatique Appliquée</strong>
+            </td>
+            <td>FSSM Marrakech – Université Cadi Ayyad</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-  <!-- FORMATION -->
-  <section id="formation">
-    <p class="section-label">03 — Parcours</p>
-    <h2>Formation <em>& diplômes</em></h2>
-    <table>
-      <thead><tr><th>Période</th><th>Cursus</th><th>Établissement</th></tr></thead>
-      <tbody>
-        <tr><td><em>2025–2028</em></td><td><strong>Cycle ingénieur</strong>Génie Logiciel & Systèmes Distribués</td><td>ENSET Mohammedia</td></tr>
-        <tr><td><em>2022–2025</em></td><td><strong>DEUG Informatique</strong></td><td>Faculté des Sciences Semlalia, Marrakech</td></tr>
-        <tr><td><em>2021–2022</em></td><td><strong>Baccalauréat Scientifique</strong></td><td>Lycée Laatamna</td></tr>
-      </tbody>
-    </table>
-  </section>
+    <hr class="divider">
 
-  <hr class="divider">
+    <section id="projets">
+      <p class="section-label">04 — Projets</p>
+      <h2>Projets <em>académiques</em></h2>
 
-  <!-- PROJETS & STAGE -->
-  <section id="projets">
-    <p class="section-label">04 — Réalisations</p>
-    <h2>Projets <em>professionnels</em></h2>
-    <div class="projects-grid">
-      <article class="project-card"><span class="project-number">01</span><h3>Gestion clients – PHP/MySQL</h3><p class="project-desc">Stage bootcamp 2024 : application CRUD responsive, sécurisation, documentation GitHub.</p><ul class="project-stack"><li>PHP</li><li>MySQL</li><li>Bootstrap</li></ul></article>
-      <article class="project-card"><span class="project-number">02</span><h3>Système de Gestion Académique</h3><p class="project-desc">Projet de groupe (4 pers.) : conception BD, CRUD, application Python.</p><ul class="project-stack"><li>Python</li><li>SQL</li><li>Git</li></ul></article>
-      <article class="project-card"><span class="project-number">03</span><h3>Développements web</h3><p class="project-desc">Portfolio, applications avec React, Node.js, Laravel, interfaces responsives.</p><ul class="project-stack"><li>React</li><li>Laravel</li><li>Node.js</li></ul></article>
-    </div>
-  </section>
+      <div class="projects-grid">
+        <article class="project-card">
+          <span class="project-number">01</span>
+          <h3>Application Web de Gestion des Clients</h3>
+          <p class="project-desc">
+            Développement d’une application web de gestion des clients avec authentification utilisateur, statistiques, base de données relationnelle MySQL et opérations CRUD.
+          </p>
+          <ul class="project-stack">
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a class="project-link" href="https://github.com/amal-eladdaou07-svg/gestion-clients-bootcamp" target="_blank">Voir le code source</a>
+        </article>
 
-  <hr class="divider">
+        <article class="project-card">
+          <span class="project-number">02</span>
+          <h3>Smart Goal Tracker</h3>
+          <p class="project-desc">
+            Application Python interactive de suivi d’objectifs avec visualisation statistique, génération automatique de rapports PDF et stockage SQLite.
+          </p>
+          <ul class="project-stack">
+            <li>Python</li>
+            <li>Streamlit</li>
+            <li>SQLite</li>
+          </ul>
+          <a class="project-link" href="https://github.com/amal-eladdaou07-svg/smart-goal-tracker" target="_blank">Voir le code source</a>
+        </article>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <p class="section-label">05 — Accréditations</p>
-    <h2>Certifications <em>obtenues</em></h2>
-    <ul class="cert-list">
-      <li><span class="cert-icon">🧠</span> AI Career Essentials – ALX</li>
-      <li><span class="cert-icon">🌐</span> Complete Web Dev Bootcamp – Udemy 2025</li>
-      <li><span class="cert-icon">🐍</span> Python Essentials 1 & 2 – Cisco</li>
-      <li><span class="cert-icon">📡</span> CCNA : Introduction aux réseaux – Cisco/ENSET</li>
-    </ul>
-  </section>
+        <article class="project-card">
+          <span class="project-number">03</span>
+          <h3>GesAvo</h3>
+          <p class="project-desc">
+            Plateforme intelligente de gestion juridique intégrant gestion des dossiers, suivi des audiences et assistant IA pour l’analyse documentaire et l’automatisation des tâches administratives.
+          </p>
+          <ul class="project-stack">
+            <li>IA</li>
+            <li>Gestion documentaire</li>
+            <li>LegalTech</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-  <hr class="divider">
+    <hr class="divider">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <p class="section-label">06 — Échangeons</p>
-    <h2>Contact <em>& réseaux</em></h2>
-    <div class="socials-grid">
-      <a class="social-link" href="https://github.com/amal-eladdaou07-svg" target="_blank"><span class="social-icon">🐙</span> GitHub (profil)</a>
-      <a class="social-link" href="#"><span class="social-icon" target="_blank">💼</span> LinkedIn</a>
-      <a class="social-link" href="mailto:amaleladdaou07@gmail.com" target="_blank"><span class="social-icon">✉️</span> amaleladdaou07@gmail.com</a>
-      <a class="social-link" href="tel:+212622864675"><span class="social-icon" target="_blank">📱</span> 0622864675</a>
-    </div>
-  </section>
-</main>
+    <section id="certifications">
+      <p class="section-label">05 — Certificats</p>
+      <h2>Certificats <em>& badges</em></h2>
+      <ul class="cert-list">
+        <li><span class="cert-icon">🌐</span> CCNA: Introduction to Networks – Cisco</li>
+        <li><span class="cert-icon">🐍</span> Python Essentials 1 – Cisco</li>
+        <li><span class="cert-icon">🧠</span> ALX AiCE – AI Career Essentials</li>
+      </ul>
+    </section>
 
-<footer>
-  <span class="footer-brand">Amal EL ADDAOUI</span>
-  <span>© 2026 — Portfolio ingénieur</span>
-</footer>
+    <hr class="divider">
+
+    <section id="contact">
+      <p class="section-label">06 — Contact</p>
+      <h2>Contact <em>& réseaux</em></h2>
+      <div class="socials-grid">
+        <a class="social-link" href="https://github.com/amal-eladdaou07-svg" target="_blank">
+          <span class="social-icon">🐙</span> GitHub
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/amal-el-addaou/" target="_blank">
+          <span class="social-icon">💼</span> LinkedIn
+        </a>
+        <a class="social-link" href="mailto:amaleladdaou07@gmail.com" target="_blank">
+          <span class="social-icon">✉️</span> amaleladdaou07@gmail.com
+        </a>
+        <a class="social-link" href="tel:+212622864675">
+          <span class="social-icon">📱</span> +212 6 22 86 46 75
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-brand">Amal EL ADDAOU</span>
+    <span>© 2026 — Portfolio personnel</span>
+  </footer>
 </body>
 </html>
